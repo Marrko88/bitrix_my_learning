@@ -1,0 +1,76 @@
+# === IDE / ОС мусор ===
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# === Логи и временное ===
+*.log
+*.tmp
+
+# === Composer / Node ===
+/vendor/
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+package-lock.json
+
+# === БОЕВЫЕ СЕКРЕТЫ и конфиги D7 на корне ===
+/.settings.php
+/.settings_extra.php
+/.env
+/.env.local
+/.env.*.local
+# Разрешаем примеры конфигов (создай их сам, если нужно)
+/.settings.php.example
+!.settings.php.example
+/.settings_extra.php.example
+!.settings_extra.php.example
+
+# === Битрикс: ядро, кэши, апдейты, бэкапы ===
+/bitrix/cache/
+/bitrix/managed_cache/
+/bitrix/stack_cache/
+/bitrix/html_pages/
+/bitrix/updates/
+/bitrix/backup/
+/bitrix/tmp/
+/bitrix/restore.php
+/bitrix/license_key.php
+
+# Игнорируем почти всё в /bitrix/, НО позволим выборочно вернуть нужное
+/bitrix/*
+# Разрешаем php_interface (часто там init.php в старых проектах)
+!/bitrix/php_interface/
+!/bitrix/php_interface/init.php
+# Секреты внутри php_interface — всё равно игнорим
+/bitrix/php_interface/dbconn.php
+/bitrix/php_interface/dbconn.php.*
+# Остальное ядро/маркеплейс — не тащим в репозиторий
+/bitrix/modules/
+/bitrix/components/
+/bitrix/templates/
+/bitrix/wizards/
+
+# === Upload: пользовательские файлы (в репо не нужны) ===
+/upload/*
+!/upload/.gitkeep
+/upload/resize_cache/
+/upload/tmp/
+/upload/webdav/
+
+# === Local: наш код — храним, но игнорим сборочные артефакты/кэш ===
+/local/**/node_modules/
+/local/**/dist/
+/local/**/build/
+/local/cache/
+/local/tmp/
+/local/**/.DS_Store
+/local/**/.idea/
+
+# === Прочее, что часто генерится ===
+/sitemap*.xml
+/.well-known/

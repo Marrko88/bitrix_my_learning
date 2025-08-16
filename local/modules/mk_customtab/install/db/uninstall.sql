@@ -1,0 +1,1 @@
+DROP TABLE IF EXISTS b24_custom_entity;
