@@ -1,0 +1,23 @@
+<?php
+
+namespace Models\Lists;
+
+use Bitrix\Main\Entity\ReferenceField;
+use Models\AbstractIblockPropertyValuesTable;
+
+class CarsPropertyValuesTable extends AbstractIblockPropertyValuesTable
+{
+    protected const IBLOCK_ID = 17;
+    public static function getMap(): array
+    {
+        $map = [
+            'CITY' => new ReferenceField(
+                'CITY',
+                CarCityPropertyValuesTable::class,
+                ['=this.CITY_ID'=>'ref.IBLOCK_ELEMENT_ID']
+
+            )
+        ];
+        return parent::getMap() + $map;
+    }
+}
