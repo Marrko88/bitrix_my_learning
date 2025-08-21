@@ -1,0 +1,7 @@
+.mk-crm-form { max-width: 520px; padding: 16px; border: 1px solid #e5e7eb; border-radius: 12px; }
+.mk-crm-form__field { display: block; margin-bottom: 12px; }
+.mk-crm-form__field > span { display: block; margin-bottom: 4px; font-weight: 600; }
+.mk-crm-form__field input, .mk-crm-form__field textarea { width: 100%; padding: 8px; border: 1px solid #d1d5db; border-radius: 8px; }
+.mk-crm-form__submit { padding: 10px 16px; border: none; border-radius: 10px; cursor: pointer; }
+.mk-crm-form__errors { margin-bottom: 12px; color: #b91c1c; }
+.mk-crm-form__success { margin-bottom: 12px; color: #065f46; }
